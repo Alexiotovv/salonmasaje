@@ -1,0 +1,86 @@
+frontend/
+├── public/
+│   ├── favicon.ico
+│   └── index.html
+│
+├── src/
+│   ├── assets/                 # Imágenes, logos, íconos
+│   │   ├── logo.png
+│   │   └── icons/
+│   │
+│   ├── components/             # Componentes reutilizables
+│   │   ├── ui/                 # Botones, inputs, modales, alerts (dumb components)
+│   │   │   ├── Button.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   └── ToastNotification.jsx
+│   │   │
+│   │   └── layout/             # Navbar, Sidebar, Footer
+│   │       ├── Navbar.jsx
+│   │       ├── Sidebar.jsx
+│   │       └── Layout.jsx      # Envuelve todas las páginas
+│   │
+│   ├── pages/                  # Páginas completas (una por ruta)
+│   │   ├── Auth/
+│   │   │   ├── Login.jsx
+│   │   │   └── Register.jsx
+│   │   │
+│   │   ├── Admin/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Masajistas/
+│   │   │   │   ├── MasajistaList.jsx
+│   │   │   │   └── MasajistaForm.jsx
+│   │   │   │
+│   │   │   ├── Servicios/
+│   │   │   │   ├── ServicioList.jsx
+│   │   │   │   └── ServicioForm.jsx
+│   │   │   │
+│   │   │   ├── Agenda/
+│   │   │   │   ├── CalendarView.jsx
+│   │   │   │   └── TurnoForm.jsx
+│   │   │   │
+│   │   │   ├── Clientes/
+│   │   │   │   ├── ClienteList.jsx
+│   │   │   │   └── ClienteProfile.jsx
+│   │   │   │
+│   │   │   ├── Caja/
+│   │   │   │   └── RegistroPago.jsx
+│   │   │   │
+│   │   │   ├── Reportes/
+│   │   │   │   └── ReportesDashboard.jsx
+│   │   │   │
+│   │   │   └── Configuracion/
+│   │   │       └── ConfiguracionSalon.jsx
+│   │   │
+│   │   └── Public/             # Si hay vistas públicas (ej. landing)
+│   │       └── HomePublic.jsx
+│   │
+│   ├── services/               # Llamadas a la API (axios/fetch)
+│   │   ├── api.js              # Instancia base de axios
+│   │   ├── authService.js
+│   │   ├── masajistaService.js
+│   │   ├── servicioService.js
+│   │   ├── turnoService.js
+│   │   ├── clienteService.js
+│   │   └── reporteService.js
+│   │
+│   ├── context/                # Estado global (opcional, si no usan Redux/Zustand)
+│   │   └── AuthContext.jsx
+│   │
+│   ├── hooks/                  # Custom hooks (ej. useFetch, useForm)
+│   │   └── useAuth.js
+│   │
+│   ├── utils/                  # Funciones auxiliares
+│   │   ├── formatters.js       # Formatear fechas, moneda, etc.
+│   │   └── validators.js
+│   │
+│   ├── routes/                 # Definición de rutas
+│   │   └── AppRoutes.jsx       # Rutas protegidas y públicas
+│   │
+│   ├── App.jsx                 # Componente raíz
+│   └── main.jsx                # Punto de entrada
+│
+├── .gitignore
+├── package.json
+├── vite.config.js              # o craco.config.js si usa CRA
+└── README.md
