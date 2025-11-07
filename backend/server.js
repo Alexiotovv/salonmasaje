@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const sequelize = require('./config/db'); // Solo para probar conexión
 const app = express();
 
 // Middleware
@@ -14,7 +13,7 @@ app.get('/api/test', (req, res) => {
 });
 
 // Aquí las rutas futuras
-// app.use('/api/auth', require('./routes/auth.routes'));
+app.use('/api/auth', require('./routes/auth.routes'));
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Ruta no encontrada' });
