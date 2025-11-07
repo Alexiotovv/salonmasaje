@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# Agenda de Turnos - Gatitas Senatinas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sistema de gestión de citas para salón de masajes desarrollado con React.js. Permite crear, editar, eliminar y visualizar turnos en un calendario interactivo.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- 📅 **Calendario Interactivo**: Vista mensual, semanal y diaria con FullCalendar
+- ➕ **Gestión de Turnos**: Crear, editar y eliminar citas directamente desde el calendario
+- 🔍 **Búsqueda**: Buscar turnos por cliente, masajista o servicio
+- 📋 **Lista de Turnos**: Panel lateral con todos los turnos registrados
+- 💰 **Precios y Servicios**: 6 tipos de masajes con precios y duraciones específicas
+- 📱 **Responsive**: Diseño adaptativo para diferentes dispositivos
 
-### `npm start`
+## Servicios Disponibles
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Masaje Relajante - $50 (60 min)
+- Masaje Deportivo - $70 (90 min)
+- Masaje Terapéutico - $80 (75 min)
+- Masaje Facial - $40 (45 min)
+- Masaje de Piedras Calientes - $90 (90 min)
+- Masaje Aromaterapia - $60 (60 min)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalación y Configuración
 
-### `npm test`
+### Prerrequisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (versión 14 o superior)
+- npm o yarn
 
-### `npm run build`
+### Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clona el repositorio:**
+   ```bash
+   git clone <url-del-repositorio>
+   cd salonmasaje/frontend
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Instala las dependencias:**
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Instala las dependencias específicas del proyecto:**
+   ```bash
+   npm install @fullcalendar/react @fullcalendar/core @fullcalendar/daygrid @fullcalendar/timegrid @fullcalendar/interaction
+   ```
 
-### `npm run eject`
+### Dependencias Principales
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React**: ^19.2.0
+- **FullCalendar**: Para la gestión del calendario
+  - @fullcalendar/react
+  - @fullcalendar/core
+  - @fullcalendar/daygrid
+  - @fullcalendar/timegrid
+  - @fullcalendar/interaction
+- **Testing Library**: Para pruebas
+- **Web Vitals**: Para métricas de rendimiento
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Uso
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Ejecutar la aplicación
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+La aplicación estará disponible en [http://localhost:3000](http://localhost:3000)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Funcionalidades
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Crear Turno**:
+   - Haz clic en "Nuevo Turno" o en cualquier fecha/hora del calendario
+   - Completa el formulario con los datos del cliente y servicio
+   - El sistema calcula automáticamente la hora de fin según la duración del servicio
 
-### Code Splitting
+2. **Editar Turno**:
+   - Haz clic en cualquier turno en el calendario o en la lista lateral
+   - Modifica los datos necesarios
+   - Guarda los cambios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Eliminar Turno**:
+   - Usa el botón "Eliminar" en el turno del calendario o lista
+   - Confirma la eliminación
 
-### Analyzing the Bundle Size
+4. **Buscar Turnos**:
+   - Utiliza la barra de búsqueda para filtrar por cliente, masajista o servicio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Estructura del Proyecto
 
-### Making a Progressive Web App
+```
+frontend/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── CalendarView.js          # Componente principal del calendario
+│   │   ├── CalendarView.css         # Estilos del calendario
+│   │   ├── AppointmentForm.js       # Formulario de turnos
+│   │   └── AppointmentForm.css      # Estilos del formulario
+│   ├── App.js                       # Componente raíz
+│   ├── App.css                      # Estilos principales
+│   ├── index.js                     # Punto de entrada
+│   └── ...
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Desarrollo
 
-### Advanced Configuration
+### Scripts Disponibles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `npm start`: Ejecuta la aplicación en modo desarrollo
+- `npm test`: Ejecuta las pruebas
+- `npm run build`: Construye la aplicación para producción
+- `npm run eject`: Expone la configuración de Create React App (irreversible)
 
-### Deployment
+### Personalización
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Los servicios y precios pueden modificarse en `AppointmentForm.js` en la sección de opciones del select de servicios.
 
-### `npm run build` fails to minify
+## Contribución
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT.
