@@ -1,0 +1,287 @@
+.calendar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.calendar-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.calendar-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-create {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-create:hover {
+  background-color: #45a049;
+}
+
+.search-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.calendar-and-list {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.calendar-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.appointments-sidebar {
+  width: 350px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.appointments-sidebar h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.appointments-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.appointment-item {
+  background-color: white;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #4CAF50;
+}
+
+.appointment-details h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.appointment-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-edit {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-edit:hover {
+  background-color: #1976D2;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #d32f2f;
+}
+
+.status-confirmed {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.status-cancelled {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.fc {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fc-header-toolbar {
+  margin-bottom: 1em !important;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fc-button {
+  background-color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
+  color: white !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  padding: 8px 12px !important;
+}
+
+.fc-button:hover {
+  background-color: #45a049 !important;
+  border-color: #45a049 !important;
+}
+
+.fc-button:not(:disabled).fc-button-active {
+  background-color: #357a38 !important;
+  border-color: #357a38 !important;
+}
+
+.fc-daygrid-day:hover,
+.fc-timegrid-slot:hover {
+  background-color: #f0f8f0;
+}
+
+.calendar-event-content {
+  position: relative;
+  padding: 8px;
+  font-size: 10px;
+  line-height: 1.2;
+  color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-header {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.event-details {
+  flex: 1;
+  margin-bottom: 4px;
+}
+
+.event-details div {
+  margin: 1px 0;
+  font-size: 9px;
+}
+
+.event-actions {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.event-btn-edit,
+.event-btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 1px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-btn-edit:hover {
+  background-color: rgba(33, 150, 243, 0.3);
+}
+
+.event-btn-delete:hover {
+  background-color: rgba(244, 67, 54, 0.3);
+}
+
+.fc-event {
+  border-radius: 4px;
+  border: none;
+  padding: 0 !important;
+  height: auto !important;
+  min-height: 100px;
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.fc-event.confirmed {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.fc-event.pending {
+  background-color: #ff9800;
+  border-color: #ff9800;
+}
+
+.fc-event.cancelled {
+  background-color: #f44336;
+  border-color: #f44336;
+}
+
+.fc-timegrid-slot {
+  height: 40px;
+}
+
+.fc-col-header-cell {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+
